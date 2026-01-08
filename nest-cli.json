@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/exam-system/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/exam-system/tsconfig.app.json",
+    "plugins": [
+      {
+        "name": "@nestjs/swagger",
+        "options": {
+          "classValidatorShim": true,
+          "introspectComments": true,
+          "dtoKeyOfComment": "description",
+          "dtoExtraProperties": false,
+          "outputFile": "docs/swagger-spec.json",
+          "include": [
+            "**/apps/**/src/**/*.dto.ts",
+            "**/apps/**/src/**/*.entity.ts",
+            "**/apps/**/src/**/*.vo.ts"
+          ]
+        }
+      }
+    ]
+  },
+  "monorepo": true,
+  "root": "apps/exam-system",
+  "projects": {
+    "analyse": {
+      "type": "application",
+      "root": "apps/analyse",
+      "entryFile": "main",
+      "sourceRoot": "apps/analyse/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/analyse/tsconfig.app.json"
+      }
+    },
+    "answer": {
+      "type": "application",
+      "root": "apps/answer",
+      "entryFile": "main",
+      "sourceRoot": "apps/answer/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/answer/tsconfig.app.json"
+      }
+    },
+    "auth": {
+      "type": "library",
+      "root": "libs/auth",
+      "entryFile": "index",
+      "sourceRoot": "libs/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/auth/tsconfig.lib.json"
+      }
+    },
+    "database": {
+      "type": "library",
+      "root": "libs/database",
+      "entryFile": "index",
+      "sourceRoot": "libs/database/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/database/tsconfig.lib.json"
+      }
+    },
+    "decorator": {
+      "type": "library",
+      "root": "libs/decorator",
+      "entryFile": "index",
+      "sourceRoot": "libs/decorator/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/decorator/tsconfig.lib.json"
+      }
+    },
+    "dto": {
+      "type": "library",
+      "root": "libs/dto",
+      "entryFile": "index",
+      "sourceRoot": "libs/dto/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/dto/tsconfig.lib.json"
+      }
+    },
+    "email": {
+      "type": "library",
+      "root": "libs/email",
+      "entryFile": "index",
+      "sourceRoot": "libs/email/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/email/tsconfig.lib.json"
+      }
+    },
+    "entity": {
+      "type": "library",
+      "root": "libs/entity",
+      "entryFile": "index",
+      "sourceRoot": "libs/entity/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/entity/tsconfig.lib.json"
+      }
+    },
+    "exam": {
+      "type": "application",
+      "root": "apps/exam",
+      "entryFile": "main",
+      "sourceRoot": "apps/exam/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/exam/tsconfig.app.json"
+      }
+    },
+    "exam-system": {
+      "type": "application",
+      "root": "apps/exam-system",
+      "entryFile": "main",
+      "sourceRoot": "apps/exam-system/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/exam-system/tsconfig.app.json"
+      }
+    },
+    "interceptor": {
+      "type": "library",
+      "root": "libs/interceptor",
+      "entryFile": "index",
+      "sourceRoot": "libs/interceptor/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/interceptor/tsconfig.lib.json"
+      }
+    },
+    "prisma": {
+      "type": "library",
+      "root": "libs/prisma",
+      "entryFile": "index",
+      "sourceRoot": "libs/prisma/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/prisma/tsconfig.lib.json"
+      }
+    },
+    "redis": {
+      "type": "library",
+      "root": "libs/redis",
+      "entryFile": "index",
+      "sourceRoot": "libs/redis/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/redis/tsconfig.lib.json"
+      }
+    },
+    "types": {
+      "type": "library",
+      "root": "libs/types",
+      "entryFile": "index",
+      "sourceRoot": "libs/types/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/types/tsconfig.lib.json"
+      }
+    },
+    "user": {
+      "type": "application",
+      "root": "apps/user",
+      "entryFile": "main",
+      "sourceRoot": "apps/user/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/user/tsconfig.app.json"
+      }
+    },
+    "vo": {
+      "type": "library",
+      "root": "libs/vo",
+      "entryFile": "index",
+      "sourceRoot": "libs/vo/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/vo/tsconfig.lib.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,108 @@
+:root {
+  /* 基础颜色 */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f5f7fa;
+  --bg-tertiary: #e6f7ff;
+  --bg-hover: #f0f5ff;
+  --bg-card: #ffffff;
+  
+  /* 文本颜色 */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --text-light: #ffffff;
+  
+  /* 导航栏颜色 */
+  --nav-bg: #409eff;
+  --nav-text: #ffffff;
+  --nav-hover: #69b1ff;
+  
+  /* 主背景 */
+  --main-bg: #f5f7fa;
+  
+  /* 边框颜色 */
+  --border-primary: #e8e8e8;
+  --border-secondary: #d9d9d9;
+  --border-light: #f0f0f0;
+  
+  /* 按钮颜色 */
+  --btn-primary: #1890ff;
+  --btn-primary-hover: #40a9ff;
+  --btn-success: #52c41a;
+  --btn-warning: #faad14;
+  --btn-danger: #ff4d4f;
+  --btn-default: #ffffff;
+  
+  /* 标签颜色 */
+  --tag-copy-bg: #fff1f0;
+  --tag-copy-text: #ff4d4f;
+  --tag-copy-border: #ffccc7;
+  --tag-exam-bg: #fff2e8;
+  --tag-exam-text: #fa8c16;
+  --tag-exam-border: #ffd591;
+  
+  /* 阴影效果 */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+  
+  /* 状态颜色 */
+  --status-published: #52c41a;
+  --status-unpublished: #1890ff;
+  --status-stopped: #faad14;
+}
+
+/* 当 html 标签有 .dark 类时，覆盖变量 */
+html.dark {
+  /* 基础颜色 */
+  --bg-primary: #121314;
+  --bg-secondary: #1d1e1f;
+  --bg-tertiary: #2a303c;
+  --bg-hover: #2a303c;
+  --bg-card: #1d1e1f;
+  
+  /* 文本颜色 */
+  --text-primary: #cfd3dc;
+  --text-secondary: #a0a3a9;
+  --text-tertiary: #787b80;
+  --text-light: #ffffff;
+  
+  /* 导航栏颜色 */
+  --nav-bg: #1d1e1f;
+  --nav-text: #cfd3dc;
+  --nav-hover: #2a303c;
+  
+  /* 主背景 */
+  --main-bg: #121314;
+  
+  /* 边框颜色 */
+  --border-primary: #33363d;
+  --border-secondary: #252830;
+  --border-light: #33363d;
+  
+  /* 按钮颜色 */
+  --btn-primary: #1890ff;
+  --btn-primary-hover: #40a9ff;
+  --btn-success: #52c41a;
+  --btn-warning: #faad14;
+  --btn-danger: #ff4d4f;
+  --btn-default: #2a303c;
+  
+  /* 标签颜色 */
+  --tag-copy-bg: #2e1d1d;
+  --tag-copy-text: #ff7875;
+  --tag-copy-border: #4a2a2a;
+  --tag-exam-bg: #332a1d;
+  --tag-exam-text: #ffb347;
+  --tag-exam-border: #4a3a2a;
+  
+  /* 阴影效果 */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
+  
+  /* 状态颜色 */
+  --status-published: #73d13d;
+  --status-unpublished: #40a9ff;
+  --status-stopped: #ffc53d;
+}
