@@ -29,6 +29,26 @@ const router = createRouter({
           name: 'examList',
           component: () => import('@/views/exam/List.vue'),
         },
+        {
+          path: 'sendExam/:id',
+          name: 'sendExam',
+          component: () => import('@/views/exam/SendExam.vue'),
+        },
+        {
+          path: 'exam/:id',
+          name: 'exam',
+          component: () => import('@/views/exam/Exam.vue'),
+        },
+        {
+          path: 'result',
+          name: 'result',
+          component: () => import('@/views/exam/Result.vue'),
+        },
+        {
+          path: 'record',
+          name: 'record',
+          component: () => import('@/views/exam/ExamRecord.vue'),
+        },
       ],
     },
   ],

@@ -7,6 +7,7 @@ import {
   OneToMany, // 1. 必须引入关系装饰器
 } from 'typeorm';
 import { Exam } from './exam.entity';
+import { Answer } from '@app/entity/answer.entity';
 
 @Entity('users')
 export class User {
@@ -37,6 +38,8 @@ export class User {
   @OneToMany(() => Exam, (exam) => exam.createUser)
   exams: Exam[];
 
+  @OneToMany(() => Answer, (answer) => answer.answerer)
+  answers: Answer[];
   @CreateDateColumn({
     name: 'create_time',
     type: 'timestamp',

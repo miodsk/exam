@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { useStore } from '@/stores'
 // 💡 必须从图标库中导入这两个组件
-import { Moon, Sunny, Avatar, Tickets } from '@element-plus/icons-vue'
+import { Moon, Sunny, Avatar, Tickets, DocumentChecked } from '@element-plus/icons-vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -11,6 +11,9 @@ const toAvatar = () => {
 }
 const toExam = () => {
   router.push('/examList')
+}
+const toRecord = () => {
+  router.push('/record')
 }
 const { app, user } = useStore()
 </script>
@@ -24,6 +27,9 @@ const { app, user } = useStore()
       </el-icon>
       <el-icon @click="toExam">
         <Tickets />
+      </el-icon>
+      <el-icon @click="toRecord">
+        <DocumentChecked />
       </el-icon>
     </div>
     <div class="right-box">

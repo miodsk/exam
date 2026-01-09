@@ -6,8 +6,10 @@ import {
   UpdateDateColumn,
   ManyToOne,
   JoinColumn,
+  OneToMany,
 } from 'typeorm';
-import { User } from './user.entity'; // 确保路径正确
+import { User } from './user.entity';
+import { Answer } from '@app/entity/answer.entity'; // 确保路径正确
 
 @Entity('exam')
 export class Exam {
@@ -68,4 +70,6 @@ export class Exam {
   @ManyToOne(() => User, (user) => user.exams)
   @JoinColumn({ name: 'create_user_id' })
   createUser: User;
+  @OneToMany(() => Answer, (answer) => answer.exam)
+  answers: Answer[];
 }

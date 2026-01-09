@@ -2,6 +2,8 @@
 import { useStore } from '@/stores'
 import { ref, reactive, onUnmounted } from 'vue'
 import { Api } from '@/api/userApi'
+import {useRoute, useRouter} from 'vue-router'
+const router = useRouter()
 
 const api = new Api().user
 const { user } = useStore()
@@ -43,6 +45,8 @@ const handleLogin = async () => {
     await loginFormRef.value.validate()
     loading.value = true
     await user.login(loginForm)
+    ElMessage.success('登录成功')
+    router.push({path: '/'})
   } catch (error) {
     console.error('登录失败:', error)
   } finally {

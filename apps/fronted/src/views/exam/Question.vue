@@ -18,19 +18,29 @@ const props = defineProps<{
       </div>
     </template>
     <div>{{ question.question }}</div>
-    <div style="margin-top: %">答案</div>
+    <div style="margin-top: 5%">答案</div>
     <div v-if="question.type === 'radio'">
       <el-radio-group v-model="question.answer">
-        <el-radio v-for="opt in question.options" disabled :key="opt" :label="opt">
-          {{ opt }}
+        <el-radio
+          v-for="(opt, index) in question.options"
+          :value="String.fromCharCode(65 + index)"
+          :key="opt"
+          disabled
+        >
+          {{ String.fromCharCode(65 + index) }}.{{ opt }}
         </el-radio>
       </el-radio-group>
     </div>
 
     <div v-else-if="question.type === 'checkbox'">
       <el-checkbox-group v-model="question.answer">
-        <el-checkbox v-for="opt in question.options" disabled :key="opt" :label="opt">
-          {{ opt }}
+        <el-checkbox
+          v-for="(opt, index) in question.options"
+          :value="String.fromCharCode(65 + index)"
+          disabled
+          :key="opt"
+        >
+          {{ String.fromCharCode(65 + index) }}{{ opt }}
         </el-checkbox>
       </el-checkbox-group>
     </div>

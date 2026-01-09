@@ -1,12 +1,11 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Query } from '@nestjs/common';
 import { AnalyseService } from './analyse.service';
 
-@Controller()
+@Controller('analyse')
 export class AnalyseController {
   constructor(private readonly analyseService: AnalyseService) {}
-
-  @Get()
-  getHello(): string {
-    return this.analyseService.getHello();
+  @Get('ranking')
+  async ranking(@Query('examId') examId: number) {
+    return await this.analyseService.ranking(examId);
   }
 }

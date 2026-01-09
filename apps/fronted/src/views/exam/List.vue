@@ -52,6 +52,12 @@ const handleTestDesign = (id: number) => {
 }
 
 const handleSendTest = (id: number) => {
+  router.push({
+    path: `/exam/${id}`,
+    params: {
+      id,
+    },
+  })
   console.log('发送考试', id)
 }
 
@@ -206,6 +212,9 @@ onMounted(() => {
           <div class="questionnaire-header">
             <div class="questionnaire-title">
               <h3>{{ item.name }}</h3>
+              <el-tag :type="item.isDelete ? 'danger' : 'success'" size="small">{{
+                item.isDelete ? '已删除' : '正常'
+              }}</el-tag>
             </div>
 
             <div class="questionnaire-meta">

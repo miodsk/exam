@@ -58,6 +58,12 @@
       "@app/entity/*": [
         "libs/entity/src/*"
       ],
+      "@app/excel": [
+        "libs/excel/src"
+      ],
+      "@app/excel/*": [
+        "libs/excel/src/*"
+      ],
       "@app/interceptor": [
         "libs/interceptor/src"
       ],

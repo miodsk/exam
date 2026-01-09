@@ -4,6 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { Exam } from '@app/entity/exam.entity';
 import { User } from '@app/entity/user.entity';
+import { Answer } from '@app/entity';
 
 @Module({
   imports: [
@@ -20,7 +21,7 @@ import { User } from '@app/entity/user.entity';
         username: config.get<string>('DB_USERNAME', 'postgres'),
         password: config.get<string>('DB_PASSWORD', '2017+Sun'),
         database: config.get<string>('DB_NAME', 'exam_system'),
-        entities: [Exam, User],
+        entities: [Exam, User, Answer],
         synchronize: true,
       }),
     }),
